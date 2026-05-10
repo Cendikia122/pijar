@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lodz - The Museum HTML Template | Gallery Grid</title>
+
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header-->
+    <header class="main-header">
+        <!-- Main Box -->
+        <div class="header-lower">
+            <div class="auto-container">
+               <div class="main-box clearfix">
+                    <!--Logo Box-->
+                    <div class="logo-box">
+                        <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+                    </div>
+                    <!--Nav Outer-->
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->      
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li class="dropdown"><a href="index.html">Home</a>
+                                        <ul>
+                                            <li><a href="index.html">Home Type One</a></li>
+                                            <li><a href="index-2.html">Home Type Two</a></li>
+                                            <li class="dropdown"><a href="index.html">Header Styles</a>
+                                                <ul>
+                                                    <li><a href="index.html">Header Style One</a></li>
+                                                    <li><a href="index-2.html">Header Style Two</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li class="dropdown"><a href="#">Event</a>
+                                        <ul>
+                                            <li><a href="event-list.html">Event List View</a></li>
+                                            <li><a href="event-grid.html">Event Grid View</a></li>
+                                            <li><a href="event-detail.html">Event Detail</a></li>
+                                        </ul>
+                                    </li>                              
+                                    <li class="current dropdown"><a href="#">Gallery</a>
+                                        <ul>
+                                            <li><a href="gallery-full-width.html">Gallery Full Width</a></li>
+                                            <li><a href="gallery-grid.html">Gallery 03 Column</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Blog</a>
+                                        <ul>
+                                            <li><a href="blog-grid.html">Blog Grid View</a></li>
+                                            <li><a href="blog-list.html">Blog With Sidebar</a></li>
+                                            <li><a href="blog-detail-1.html">Blog Detail 01</a></li>
+                                            <li><a href="blog-detail-2.html">Blog Detail 02</a></li>
+                                            <li><a href="error-page.html">Error Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+
+                        </nav>
+                        <!-- Main Menu End-->
+                        
+                        <!--Search Box-->
+                        <div class="search-box-outer">
+                            <!--Search Box-->
+                            <div class="dropdown dropdown-outer">
+                                <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                    <li class="panel-outer">
+                                        <div class="form-container">
+                                            <form method="post" action="blog.html">
+                                                <div class="form-group">
+                                                    <input type="search" name="field-name" value="" placeholder="Search Here" required="">
+                                                    <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--End earch Box-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Header -->
+        <div class="sticky-header">
+            <div class="auto-container clearfix">
+                <!--Logo-->
+                <div class="logo pull-left">
+                    <a href="index.html" title=""><img src="images/logo-small.png" alt="" title=""></a>
+                </div>
+                <!--Right Col-->
+                <div class="pull-right">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-collapse collapse clearfix">
+                             <ul class="navigation clearfix">
+                                <li class="dropdown"><a href="index.html">Home</a>
+                                    <ul>
+                                        <li><a href="index.html">Home Type One</a></li>
+                                        <li><a href="index-2.html">Home Type Two</a></li>
+                                        <li class="dropdown"><a href="index.html">Header Styles</a>
+                                            <ul>
+                                                <li><a href="index.html">Header Style One</a></li>
+                                                <li><a href="index-2.html">Header Style Two</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="dropdown"><a href="#">Event</a>
+                                    <ul>
+                                        <li><a href="event-list.html">Event List View</a></li>
+                                        <li><a href="event-grid.html">Event Grid View</a></li>
+                                        <li><a href="event-detail.html">Event Detail</a></li>
+                                    </ul>
+                                </li>                              
+                                <li class="current dropdown"><a href="#">Gallery</a>
+                                    <ul>
+                                        <li><a href="gallery-full-width.html">Gallery Full Width</a></li>
+                                        <li><a href="gallery-grid.html">Gallery 03 Column</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Blog</a>
+                                    <ul>
+                                        <li><a href="blog-grid.html">Blog Grid View</a></li>
+                                        <li><a href="blog-list.html">Blog With Sidebar</a></li>
+                                        <li><a href="blog-detail-1.html">Blog Detail 01</a></li>
+                                        <li><a href="blog-detail-2.html">Blog Detail 02</a></li>
+                                        <li><a href="error-page.html">Error Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav><!-- Main Menu End-->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End Main Header -->
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url(images/background/9.jpg);">
+        <div class="auto-container">
+            <h1>Gallery Grid</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="index.html">Home </a></li>
+                <li>Gallery</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="auto-container">
+             <!--MixitUp Galery-->
+            <div class="mixitup-gallery">
+                <div class="inner-container clearfix">
+                    <div class="sec-title">
+                        <span class="title">Its Our Great Flows</span>
+                        <h2>From Our Gallery</h2>
+                    </div>
+
+                    <!--Filter-->
+                    <div class="filters text-center clearfix">                     
+                        <ul class="filter-tabs filter-btns clearfix">
+                            <li class="filter active" data-role="button" data-filter="all">All</li>
+                            <li class="filter" data-role="button" data-filter=".ancient">Ancient Statue</li>
+                            <li class="filter" data-role="button" data-filter=".modern">Modern Art</li>
+                            <li class="filter" data-role="button" data-filter=".others">Others</li>
+                            <li class="filter" data-role="button" data-filter=".vintage">Vintage Art</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-list row clearfix">
+                    <!-- Gallery Item-->
+                    <div class="gallery-item-two mix all ancient others col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="images/gallery/1.jpg" data-fancybox="gallery"><img src="images/gallery/1.jpg" alt=""></a>
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <h3><a href="#">Original oil painting. Modern Impressionism</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item-->
+                    <div class="gallery-item-two mix all others vintage col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="images/gallery/14.jpg" data-fancybox="gallery"><img src="images/gallery/14.jpg" alt=""></a>
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <h3><a href="#">Original oil painting. Modern Impressionism</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item-->
+                    <div class="gallery-item-two mix all vintage modern col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="images/gallery/15.jpg" data-fancybox="gallery"><img src="images/gallery/15.jpg" alt=""></a>
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <h3><a href="#">Original oil painting. Modern Impressionism</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item-->
+                    <div class="gallery-item-two mix all modern vintage col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="images/gallery/16.jpg" data-fancybox="gallery"><img src="images/gallery/16.jpg" alt=""></a>
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <h3><a href="#">Original oil painting. Modern Impressionism</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item-->
+                    <div class="gallery-item-two mix all ancient modern col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="images/gallery/17.jpg" data-fancybox="gallery"><img src="images/gallery/17.jpg" alt=""></a>
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <h3><a href="#">Original oil painting. Modern Impressionism</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item-->
+                    <div class="gallery-item-two mix all others modern col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="images/gallery/18.jpg" data-fancybox="gallery"><img src="images/gallery/18.jpg" alt=""></a>
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <h3><a href="#">Original oil painting. Modern Impressionism</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item-->
+                    <div class="gallery-item-two mix all vintage modern col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="images/gallery/19.jpg" data-fancybox="gallery"><img src="images/gallery/19.jpg" alt=""></a>
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <h3><a href="#">Original oil painting. Modern Impressionism</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item-->
+                    <div class="gallery-item-two mix all modern others col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="images/gallery/20.jpg" data-fancybox="gallery"><img src="images/gallery/20.jpg" alt=""></a>
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <h3><a href="#">Original oil painting. Modern Impressionism</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item-->
+                    <div class="gallery-item-two mix all modern others col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="images/gallery/21.jpg" data-fancybox="gallery"><img src="images/gallery/21.jpg" alt=""></a>
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <h3><a href="#">Original oil painting. Modern Impressionism</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Gallery section -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="auto-container">
+        
+            <!--Widgets Section-->
+            <div class="widgets-section">
+                <div class="row clearfix">
+                    <!--Big Column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-7 col-sm-6 col-xs-12">
+                                <div class="footer-widget about-widget">
+                                    <div class="footer-logo">
+                                        <figure>
+                                            <a href="index.html"><img src="images/footer-logo.png" alt=""></a>
+                                        </figure>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div class="text">Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail.</div>
+                                        <ul class="social-icon-two">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-5 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                    <h2 class="widget-title">Quick Link</h2>
+                                    <div class="widget-content">
+                                        <ul class="list">
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Event</a></li>
+                                            <li><a href="#">Gallery</a></li>
+                                            <li><a href="#">Pages</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>  
+                            </div>         
+                        </div>
+                    </div>
+                    
+                    <!--Big Column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                    <h2 class="widget-title">Contact Us</h2>
+                                    <div class="widget-content">
+                                        <ul class="list">
+                                            <li>Lodz  Museums <br>32 Quincy Street <br> Cambridge, MA</li>
+                                            <li>(617) 495-9400<br>(617) 495-9500</li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                    <h2 class="widget-title">Open Hours</h2>
+                                    <div class="widget-content">
+                                        <ul class="list">
+                                            <li>Daily: 09:00 a.m. – 6:00 p.m<br>Monday &amp; Holidays: Closed</li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Footer Bottom-->
+         <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="copyright-text clearfix">
+                    <p>© Copyright 2018 <a href="index.html">Lodz.</a> All Rights Reserved </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Main Footer -->
+
+</div>  
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
+
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/mixitup.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

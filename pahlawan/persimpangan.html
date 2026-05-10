@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Persimpangan — Hidup di Dalam Sejarah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ═══════════════════ SCREEN 1: LANDING ═══════════════════ -->
+<div id="s-landing" class="screen active">
+  <div class="split split-left" onclick="goToModes()">
+    <span class="char-bg-letter">T</span>
+    <div class="corner-decor tl"></div>
+    <div class="corner-decor bl"></div>
+    <div class="char-eyebrow">Sang Revolusioner</div>
+    <div class="char-name">Tan Malaka</div>
+    <div class="char-years">1897 — 1949</div>
+    <div class="char-quote">"Merdeka 100% — tidak ada kompromi dengan imperialisme dalam bentuk apapun."</div>
+    <div class="char-tag">Madilog · Marxisme Independen</div>
+  </div>
+
+  <div class="split-mid">
+    <div class="divider-label">P E R S I M P A N G A N</div>
+  </div>
+
+  <div class="split split-right" onclick="goToModes()">
+    <span class="char-bg-letter">S</span>
+    <div class="corner-decor tr"></div>
+    <div class="corner-decor br"></div>
+    <div class="char-eyebrow">Sang Negarawan</div>
+    <div class="char-name">Sutan Sjahrir</div>
+    <div class="char-years">1909 — 1966</div>
+    <div class="char-quote">"Kemerdekaan yang sejati dibangun bukan dari peluru, melainkan dari legitimasi dan martabat bangsa."</div>
+    <div class="char-tag">Perjuangan Kita · Sosialisme Demokratik</div>
+  </div>
+
+  <div class="landing-cta">
+    <div class="tagline" id="tagline-text"></div>
+    <button class="btn-start" onclick="goToModes()">Masuk ke Persimpangan</button>
+  </div>
+</div>
+
+<!-- ═══════════════════ SCREEN 2: MODE SELECT ═══════════════════ -->
+<div id="s-modes" class="screen">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid var(--border);flex-shrink:0;">
+    <div style="font-family:'Cinzel',serif;font-size:14px;letter-spacing:6px;color:var(--gold);opacity:0.7;">Persimpangan</div>
+    <button class="btn-back" onclick="showScreen('s-landing')">← Kembali</button>
+  </div>
+  <div id="s-modes-inner" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;gap:32px;overflow:auto;">
+    <div class="mode-header">
+      <h2>Pilih Modus Penjelajahan</h2>
+      <p>Empat cara untuk memahami dua arsitek kemerdekaan Indonesia</p>
+    </div>
+    <div class="mode-grid">
+      <div class="mode-card active-mode" onclick="showNarrative()">
+        <div class="mode-num">Modus 01</div>
+        <div class="mode-title">Jejak Pilihan</div>
+        <div class="mode-sub">Branching Narrative Engine</div>
+        <div class="mode-desc">Hadapi dilema historis nyata yang pernah mereka jalani. Setiap pilihanmu membuka konsekuensi dari sejarah sungguhan.</div>
+        <span class="mode-badge">Tersedia</span>
+      </div>
+      <div class="mode-card" onclick="showTimeline()">
+        <div class="mode-num">Modus 02</div>
+        <div class="mode-title">Biografi Hidup</div>
+        <div class="mode-sub">Interactive Archive Timeline</div>
+        <div class="mode-desc">Telusuri garis waktu kehidupan keduanya secara paralel — temukan saat-saat ketika dua jalan hidup ini berpotongan dan berpencar.</div>
+      </div>
+      <div class="mode-card" onclick="showDialogue()">
+        <div class="mode-num">Modus 03</div>
+        <div class="mode-title">Debat Pikiran</div>
+        <div class="mode-sub">AI In-Character Dialogue</div>
+        <div class="mode-desc">Ajukan pertanyaanmu kepada Tan Malaka dan Sjahrir. Dua AI merespons dalam karakter, dari sudut pandang filosofi masing-masing.</div>
+        <span class="mode-badge" style="border-color:var(--gold);color:var(--gold);">AI Aktif</span>
+      </div>
+      <div class="mode-card" onclick="showWarisan()">
+        <div class="mode-num">Modus 04</div>
+        <div class="mode-title">Warisan Kolektif</div>
+        <div class="mode-sub">Collective Memory Layer</div>
+        <div class="mode-desc">Lihat bagaimana ribuan penjelajah sebelummu membuat pilihan yang sama — cermin kolektif nilai-nilai generasi kita.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SCREEN 3: JEJAK PILIHAN ═══════════════════ -->
+<div id="s-narrative" class="screen">
+  <div class="narr-header">
+    <div class="narr-logo">Persimpangan</div>
+    <div class="narr-char-indicator" id="narr-char-label">Pilih Perspektif</div>
+    <button class="btn-back" onclick="showScreen('s-modes')">← Modus Lain</button>
+  </div>
+
+  <!-- CHARACTER SELECT -->
+  <div id="char-select">
+    <div class="char-pick char-pick-left" onclick="startNarrative('tanMalaka')">
+      <span class="pick-bg-letter">T</span>
+      <div class="pick-eyebrow">Perspektif</div>
+      <div class="pick-name">Tan Malaka</div>
+      <div class="pick-years">1897 — 1949</div>
+      <div class="pick-philosophy">Seorang Marxis independen yang menolak imperialisme secara mutlak. Ia rela berdiri sendiri melawan dunia demi prinsip.</div>
+      <div class="pick-cta">Jalani Jalannya</div>
+    </div>
+    <div style="width:1px;background:var(--border);flex-shrink:0;"></div>
+    <div class="char-pick char-pick-right" onclick="startNarrative('sjahrir')">
+      <span class="pick-bg-letter">S</span>
+      <div class="pick-eyebrow">Perspektif</div>
+      <div class="pick-name">Sutan Sjahrir</div>
+      <div class="pick-years">1909 — 1966</div>
+      <div class="pick-philosophy">Seorang diplomat humanis yang percaya bahwa kebebasan dimenangkan melalui akal, bukan amarah.</div>
+      <div class="pick-cta">Jalani Jalannya</div>
+    </div>
+  </div>
+
+  <!-- SCENARIO VIEW -->
+  <div id="scenario-view">
+    <div class="scenario-meta">
+      <div class="scenario-year" id="s-year"></div>
+      <div class="scenario-place" id="s-place"></div>
+      <div class="scenario-progress" id="s-progress"></div>
+    </div>
+    <div class="scenario-body">
+      <div class="scenario-situation" id="s-situation"></div>
+      <div class="scenario-question" id="s-question"></div>
+      <div class="choices-grid" id="s-choices"></div>
+    </div>
+  </div>
+
+  <!-- PROFILE RESULT -->
+  <div id="profile-result">
+    <div class="profile-title">Profil Intelektual Kamu</div>
+    <div class="profile-archetype" id="p-archetype"></div>
+    <div class="profile-desc" id="p-desc"></div>
+    <div class="profile-bars">
+      <div class="profile-bar-row">
+        <div class="profile-bar-label">Pragmatis</div>
+        <div class="profile-bar-track"><div class="profile-bar-fill" id="bar-pragmatis"></div></div>
+        <div class="profile-bar-val" id="val-pragmatis"></div>
+      </div>
+      <div class="profile-bar-row">
+        <div class="profile-bar-label">Idealis</div>
+        <div class="profile-bar-track"><div class="profile-bar-fill" id="bar-idealis"></div></div>
+        <div class="profile-bar-val" id="val-idealis"></div>
+      </div>
+      <div class="profile-bar-row">
+        <div class="profile-bar-label">Berani</div>
+        <div class="profile-bar-track"><div class="profile-bar-fill" id="bar-berani"></div></div>
+        <div class="profile-bar-val" id="val-berani"></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;">
+      <button class="btn-next" onclick="startNarrative(currentChar)">Ulangi Jalur Ini</button>
+      <button class="btn-secondary" onclick="showScreen('s-modes')">Mode Lain</button>
+    </div>
+  </div>
+
+  <!-- TRUTH LAYER -->
+  <div id="truth-layer">
+    <div class="truth-eyebrow">Lapisan Kebenaran — Apa yang Benar-Benar Terjadi</div>
+    <div class="truth-title" id="truth-title"></div>
+    <div class="truth-text" id="truth-text"></div>
+    <div class="truth-lesson" id="truth-lesson"></div>
+    <div class="truth-choices">
+      <button class="btn-next" id="btn-truth-next" onclick="nextScenario()">Lanjut ke Momen Berikutnya →</button>
+      <button class="btn-secondary" onclick="closeTruth()">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SCREEN 4: DEBAT PIKIRAN ═══════════════════ -->
+<div id="s-dialogue" class="screen">
+  <div class="dial-header">
+    <div class="dial-title">Debat Pikiran</div>
+    <div style="font-family:'Special Elite',monospace;font-size:10px;letter-spacing:2px;color:var(--muted);">AI In-Character · Anthropic Claude</div>
+    <button class="btn-back" onclick="showScreen('s-modes')">← Modus Lain</button>
+  </div>
+  <div class="dial-body">
+    <div class="char-panel panel-left">
+      <div class="panel-top">
+        <div class="panel-name">Tan Malaka</div>
+        <div class="panel-subtitle">Marxisme Independen · Merdeka 100%</div>
+      </div>
+      <div class="panel-messages" id="msg-tm">
+        <div class="message-bubble">
+          <em style="color:var(--muted);font-size:13px;">Aku menunggu pertanyaanmu. Tanyakan apa saja — tentang imperialisme hari ini, tentang keadilan, tentang apakah cara-caraku masih relevan. Aku tidak takut beradu pikiran.</em>
+        </div>
+      </div>
+    </div>
+    <div class="char-panel panel-right">
+      <div class="panel-top">
+        <div class="panel-name">Sutan Sjahrir</div>
+        <div class="panel-subtitle">Sosialisme Demokratik · Diplomasi & Humanisme</div>
+      </div>
+      <div class="panel-messages" id="msg-sj">
+        <div class="message-bubble">
+          <em style="color:var(--muted);font-size:13px;">Silakan ajukan pertanyaanmu. Saya percaya dialog adalah fondasi dari segala kemajuan — bahkan jika kita berbeda pendapat, kita bisa saling mencerdaskan.</em>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dial-input-area">
+    <div class="dial-suggestions" id="suggestions">
+      <button class="suggestion-chip" onclick="useSuggestion(this)">Apa pendapat kalian tentang kapitalisme digital hari ini?</button>
+      <button class="suggestion-chip" onclick="useSuggestion(this)">Siapa yang lebih berhak disebut pahlawan sejati?</button>
+      <button class="suggestion-chip" onclick="useSuggestion(this)">Bagaimana seharusnya Indonesia menghadapi dominasi asing saat ini?</button>
+      <button class="suggestion-chip" onclick="useSuggestion(this)">Apakah kompromi itu pengkhianatan atau kebijaksanaan?</button>
+    </div>
+    <label class="dial-input-label">Ajukan pertanyaan kepada keduanya</label>
+    <div class="dial-input-row">
+      <textarea class="dial-textarea" id="dial-input" placeholder="Pertanyaanmu kepada Tan Malaka dan Sjahrir..." rows="2"></textarea>
+      <button class="btn-ask" id="btn-ask" onclick="askBoth()">Tanyakan →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SCREEN 5: TIMELINE ═══════════════════ -->
+<div id="s-timeline" class="screen">
+  <div class="tl-header">
+    <div class="tl-title">Biografi Hidup</div>
+    <button class="btn-back" onclick="showScreen('s-modes')">← Modus Lain</button>
+  </div>
+  <div class="tl-body">
+    <div style="display:flex;gap:24px;margin-bottom:32px;font-family:'Special Elite',monospace;font-size:10px;letter-spacing:3px;">
+      <span style="color:var(--red-light);">■ Tan Malaka</span>
+      <span style="color:var(--blue-light);">■ Sutan Sjahrir</span>
+    </div>
+    <div class="tl-track">
+      <div class="tl-line"></div>
+      <div class="tl-events" id="tl-events"></div>
+    </div>
+    <div class="tl-detail-card" id="tl-detail">
+      <div class="tl-detail-year" id="tl-d-year"></div>
+      <div class="tl-detail-title" id="tl-d-title"></div>
+      <div class="tl-detail-text" id="tl-d-text"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SCREEN 6: WARISAN ═══════════════════ -->
+<div id="s-warisan" class="screen">
+  <div class="warisan-header">
+    <div class="warisan-title">Warisan Kolektif</div>
+    <button class="btn-back" onclick="showScreen('s-modes')">← Modus Lain</button>
+  </div>
+  <div class="warisan-body">
+    <div class="warisan-note">Data di bawah ini merepresentasikan pilihan agregat dari seluruh penjelajah Persimpangan. Ini bukan skor benar/salah — ini cermin kolektif tentang bagaimana generasi kita menginternalisasi nilai-nilai kemerdekaan.</div>
+    <div class="stats-grid" id="stats-grid"></div>
+    <div style="font-family:'Special Elite',monospace;font-size:10px;letter-spacing:3px;color:var(--muted);margin-top:16px;">
+      Data diperbarui secara real-time · Dapat diunduh untuk bahan diskusi kelas
+    </div>
+  </div>
+</div>
+
+<script src="logic/script.js"></script>
+</body>
+</html>
